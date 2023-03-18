@@ -1,0 +1,9 @@
+** sch_path: /home/ubuntu/Desktop/examples/xschem/VLSI-II/NAND2_eymenunay.sym
+**.subckt NAND2_eymenunay
+**** begin user architecture code
+type=subcircuit
+format="@name @pinlist @symname"
+template="name=X1"
+**** end user architecture code
+**.ends
+.end
