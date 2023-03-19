@@ -1,0 +1,25 @@
+* NGSPICE file created from NOR2_eymenunay.ext - technology: sky130B
+
+.subckt sky130_fd_pr__nfet_01v8_8XY39T a_15_n131# a_n175_n243# a_n33_91# a_n73_n131#
+X0 a_15_n131# a_n33_91# a_n73_n131# a_n175_n243# sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__nfet_01v8_8XY3SE a_15_n131# a_n175_n243# a_n33_91# a_n73_n131#
+X0 a_15_n131# a_n33_91# a_n73_n131# a_n175_n243# sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_MNYNRG a_n73_n64# a_n33_n161# a_15_n64# w_n211_n284#
+X0 a_15_n64# a_n33_n161# a_n73_n64# w_n211_n284# sky130_fd_pr__pfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_LG57AL a_n73_n64# a_n33_n161# a_15_n64# w_n211_n284#
+X0 a_15_n64# a_n33_n161# a_n73_n64# w_n211_n284# sky130_fd_pr__pfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt NOR2_eymenunay IN1 DVDD DGND OUT IN2
+XXM1 OUT DGND IN1 DGND sky130_fd_pr__nfet_01v8_8XY39T
+XXM2 OUT DGND IN2 DGND sky130_fd_pr__nfet_01v8_8XY3SE
+XXM3 DVDD IN1 m1_699_n50# DVDD sky130_fd_pr__pfet_01v8_MNYNRG
+XXM4 m1_699_n50# IN2 OUT DVDD sky130_fd_pr__pfet_01v8_LG57AL
+.ends
+

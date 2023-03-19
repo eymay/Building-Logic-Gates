@@ -1,0 +1,32 @@
+** sch_path: /home/ubuntu/Desktop/examples/xschem/VLSI-II/xschem/NOR2_eymenunay_TB_pex.sch
+**.subckt NOR2_eymenunay_TB_pex
+VDD VDD GND 1.8
+V2 IN1 GND pulse 0 1.8 50n 1n 1n 100n 200n
+V1 IN2 GND pulse 0 1.8 0n 1n 1n 100n 200n
+C1 OUT GND 100f m=1
+X1 IN1 IN2 VDD GND OUT NOR2_eymenunay_pex
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /usr/local/share/pdk/sky130B/libs.tech/ngspice/sky130.lib.spice tt_mm
+
+
+
+
+.include NOR2_eymenunay_pex.spice
+
+
+.control
+tran 0.1n 400n
+save all
+plot IN1 IN2 OUT
+
+write NAND2_eymenunay.raw
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

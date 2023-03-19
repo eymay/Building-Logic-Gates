@@ -1,0 +1,59 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__nfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sky130_fd_pr__pfet_01v8 is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_8XY39T in circuit NOR2_eymenunay (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_8XY3SE in circuit NOR2_eymenunay (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_MNYNRG in circuit NOR2_eymenunay (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_LG57AL in circuit NOR2_eymenunay (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: NOR2_eymenunay                  |Circuit 2: NOR2_eymenunay                  
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (2)                |sky130_fd_pr__nfet_01v8 (2)                
+sky130_fd_pr__pfet_01v8 (2)                |sky130_fd_pr__pfet_01v8 (2)                
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: NOR2_eymenunay                  |Circuit 2: NOR2_eymenunay                  
+-------------------------------------------|-------------------------------------------
+IN2                                        |IN2                                        
+IN1                                        |IN1                                        
+DGND                                       |DGND                                       
+OUT                                        |OUT                                        
+DVDD                                       |DVDD                                       
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes NOR2_eymenunay and NOR2_eymenunay are equivalent.
+
+Final result: Circuits match uniquely.
+.

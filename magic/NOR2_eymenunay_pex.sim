@@ -1,0 +1,11 @@
+| units: 500000 tech: sky130B format: MIT
+x IN2 a_676_n108# OUT DVDD l=30 w=200 x=966 y=-107 sky130_fd_pr__pfet_01v8
+x IN2 DGND OUT DGND l=30 w=200 x=966 y=-760 sky130_fd_pr__nfet_01v8
+x IN1 DVDD a_676_n108# DVDD l=30 w=200 x=646 y=-107 sky130_fd_pr__pfet_01v8
+x IN1 DGND OUT DGND l=30 w=200 x=646 y=-763 sky130_fd_pr__nfet_01v8
+R OUT 2102
+R IN2 1184
+R IN1 1184
+R DVDD 11524
+R DGND 16183
+R a_676_n108# 2033
