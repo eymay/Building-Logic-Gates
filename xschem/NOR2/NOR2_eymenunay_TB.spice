@@ -1,4 +1,4 @@
-** sch_path: /home/ubuntu/Desktop/examples/xschem/VLSI-II/xschem/NOR2/NOR2_eymenunay_TB.sch
+** sch_path: /home/ubuntu/Desktop/examples/xschem/VLSI-II/NOR2_eymenunay_TB.sch
 **.subckt NOR2_eymenunay_TB
 VDD VDD GND 1.8
 V2 IN1 GND pulse 0 1.8 50n 1n 1n 100n 200n
@@ -17,7 +17,7 @@ C1 OUT GND 100f m=1
 
 tran 0.1n 400n
 save all
-plot IN1 IN2 OUT
+plot  OUT
 
 write NAND2_eymenunay.raw
 
@@ -28,8 +28,8 @@ write NAND2_eymenunay.raw
 **.ends
 
 * expanding   symbol:  NOR2_eymenunay.sym # of pins=5
-** sym_path: /home/ubuntu/Desktop/examples/xschem/VLSI-II/xschem/NOR2/NOR2_eymenunay.sym
-** sch_path: /home/ubuntu/Desktop/examples/xschem/VLSI-II/xschem/NOR2/NOR2_eymenunay.sch
+** sym_path: /home/ubuntu/Desktop/examples/xschem/VLSI-II/NOR2_eymenunay.sym
+** sch_path: /home/ubuntu/Desktop/examples/xschem/VLSI-II/NOR2_eymenunay.sch
 .subckt NOR2_eymenunay  IN1 IN2 DVDD DGND OUT
 *.ipin IN1
 *.ipin IN2

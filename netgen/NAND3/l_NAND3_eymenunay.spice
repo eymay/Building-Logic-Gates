@@ -1,0 +1,27 @@
+* NGSPICE file created from NAND3_eymenunay.ext - technology: sky130B
+
+.subckt sky130_fd_pr__nfet_01v8_64Z3AY a_15_n131# a_n175_n243# a_n33_91# a_n73_n131#
+X0 a_15_n131# a_n33_91# a_n73_n131# a_n175_n243# sky130_fd_pr__nfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_QDT3BL a_n73_n64# a_n33_n161# a_15_n64# w_n211_n284#
+X0 a_15_n64# a_n33_n161# a_n73_n64# w_n211_n284# sky130_fd_pr__pfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_BDT3BC a_n73_n64# a_n33_n161# a_15_n64# w_n211_n284#
+X0 a_15_n64# a_n33_n161# a_n73_n64# w_n211_n284# sky130_fd_pr__pfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_7HS3BC a_n73_n64# a_n33_n161# a_15_n64# w_n211_n284#
+X0 a_15_n64# a_n33_n161# a_n73_n64# w_n211_n284# sky130_fd_pr__pfet_01v8 ad=2.9e+11p pd=2.58e+06u as=2.9e+11p ps=2.58e+06u w=1e+06u l=150000u
+.ends
+
+.subckt NAND3_eymenunay IN1 IN2 IN3 DVDD DGND OUT
+XXM1 m1_1770_107# DGND IN3 DGND sky130_fd_pr__nfet_01v8_64Z3AY
+XXM2 OUT DGND IN1 m1_1778_573# sky130_fd_pr__nfet_01v8_64Z3AY
+XXM3 DVDD IN3 OUT DVDD sky130_fd_pr__pfet_01v8_QDT3BL
+XXM4 DVDD IN2 OUT DVDD sky130_fd_pr__pfet_01v8_BDT3BC
+XXM5 DVDD IN1 OUT DVDD sky130_fd_pr__pfet_01v8_7HS3BC
+XXM6 m1_1778_573# DGND IN2 m1_1770_107# sky130_fd_pr__nfet_01v8_64Z3AY
+.ends
+

@@ -34,7 +34,7 @@ tran 0.1n 400n
 save all
 plot IN1 IN2 OUT
 
-write NAND2_eymenunay.raw
+
 
 .endc
 "}
