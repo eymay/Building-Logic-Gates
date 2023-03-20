@@ -1,5 +1,4 @@
-Mehmet Eymen Ünay
-040190218
+
 # Schematic
 
 Skywater PDK is used in the design of NOR2 and NAND3 gates. As NMOS devices pull the output to GND, they have a negating effect on the output. NMOS devices were thought to provide the NOT of the boolean functions of the logic gates. To have an OR the NMOS transistors must be placed in parallel. Contrastly, PMOS counterparts should be connected in the contrasting topology which means in series for NOR2
@@ -34,7 +33,7 @@ To have the boolean function  $f(p,q,r) = \overline{(p \wedge q \wedge r)}$ perf
 | 0         | 01         | 0   |
 | 50        | 11         | 0   |
 | 100       | 10         | 0   |
-| 150       | 00         | 1    |
+| 150       | 00         | 1   |
 
 NOR2 gate takes the OR and NOT of its inputs as it can be seen from the waveform table it is matching the truth table of NOR.
 
