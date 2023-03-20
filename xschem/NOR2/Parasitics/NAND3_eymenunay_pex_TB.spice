@@ -1,0 +1,33 @@
+** sch_path:
+*+ /home/ubuntu/Desktop/examples/xschem/VLSI-II/xschem/NAND3/Parasitics/NAND3_eymenunay_pex_TB.sch
+**.subckt NAND3_eymenunay_pex_TB
+VDD VDD GND 1.8
+V2 IN1 GND pulse 0 1.8 0n 1n 1n 100n 200n
+V1 IN2 GND pulse 0 1.8 50n 1n 1n 100n 200n
+V3 IN3 GND pulse 0 1.8 75n 1n 1n 100n 200n
+C1 OUT GND 100f m=1
+X1 IN1 IN3 VDD GND OUT IN2 NAND3_eymenunay_pex
+**** begin user architecture code
+
+** opencircuitdesign pdks install
+.lib /usr/local/share/pdk/sky130B/libs.tech/ngspice/sky130.lib.spice tt_mm
+
+
+
+
+.include NAND3_eymenunay_pex.spice
+.control
+
+tran 0.1n 800n
+save all
+plot IN1+2 IN2+4 IN3+6 OUT
+
+
+
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

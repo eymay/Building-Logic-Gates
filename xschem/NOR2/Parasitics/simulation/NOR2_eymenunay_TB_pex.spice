@@ -14,12 +14,11 @@ X1 IN1 IN2 VDD GND OUT NOR2_eymenunay_pex
 
 
 
-.include NOR2_eymenunay_pex.spice
 .control
-
+.include NOR2_eymenunay_pex.spice
 tran 0.1n 400n
 save all
-plot IN1+2 IN2+4 OUT
+plot IN1 IN2 OUT
 
 write NAND2_eymenunay.raw
 

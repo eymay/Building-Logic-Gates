@@ -28,11 +28,12 @@ spice_ignore=false}
 C {devices/code_shown.sym} 280 -170 0 0 {name=NGSPICE 
 only_toplevel=true 
 value="
-.control
 .include NOR2_eymenunay_pex.spice
+.control
+
 tran 0.1n 400n
 save all
-plot IN1 IN2 OUT
+plot IN1+2 IN2+4 OUT
 
 write NAND2_eymenunay.raw
 

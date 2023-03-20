@@ -30,9 +30,9 @@ only_toplevel=true
 value="
 .control
 
-tran 0.1n 400n
+tran 0.1n 800n
 save all
-plot IN1 IN2 IN3 OUT
+plot IN1+2 IN2+4 IN3+6 OUT
 
 
 
