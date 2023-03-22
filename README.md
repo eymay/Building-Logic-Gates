@@ -5,17 +5,17 @@ Skywater PDK is used in the design of NOR2 and NAND3 gates. As NMOS devices pull
 
 ## NOR2 
 To have the boolean function  $f(p,q) = \overline{(p \vee q)}$ performed by CMOS transistor pairs, NMOS devices were thought of.   The NOT of the NOR function becomes OR for the NMOS devices, $\overline{f(p,q)} = (p \vee q)$. 
-![[Pasted image 20230320185659.png]]
+![NOR2 gate](resources/nor2Sch.png)
 
 
 
 ## NAND3
 To have the boolean function  $f(p,q,r) = \overline{(p \wedge q \wedge r)}$ performed by CMOS transistor pairs, NMOS devices were thought first. The NOT of the NOR function becomes AND for the NMOS devices, $\overline{f(p,r)} = (p \wedge q \wedge r)$. 
-![[Pasted image 20230320191505.png]]
+![NAND3 gate](resources/nand3Sch.png )
 
 ### Symbols of NOR2 and NAND3
 
-![[Pasted image 20230320191746.png]]
+![Symbols](resources/symbols.png)
 
 
 
@@ -23,9 +23,9 @@ To have the boolean function  $f(p,q,r) = \overline{(p \wedge q \wedge r)}$ perf
 
 ## NOR2
 
-![[Pasted image 20230320195143.png]]
+![NOR2 Testbench](resources/nor2Tb.png)
 
-![[Pasted image 20230320195959.png]]
+![NOR2 Waveform](resources/nor2waves.png)
 
 
 | Time (ns) | {IN1, IN2} | OUT |
@@ -39,10 +39,10 @@ NOR2 gate takes the OR and NOT of its inputs as it can be seen from the waveform
 
 
 ## NAND3
-![[Pasted image 20230320191945.png]]
+![NAND3 Testbench](resources/nand3Tb.png)
 Periods of pulses are changed to accomodate phase differences to have the most possible combinations of differing pulse values.
 
-![[Pasted image 20230320192205.png]]
+![NAND3 Waveforms](resources/nand3waves1.png)
 
 
 | Time (ns)        | {IN1, IN2, IN3} | OUT |
@@ -55,7 +55,7 @@ Periods of pulses are changed to accomodate phase differences to have the most p
 | 175              | 000             | 1   |
 | 125 (Sim. below) | 010             | 1   |
 
-![[Pasted image 20230320194252.png]]
+![NAND3 Waveform 2](resources/nand3waves2.png)
 This simulation misses the 010 input so that combination can be seen here.
 
 NAND3 takes the AND and NOT of its inputs so to make the output 0 all of the inputs must be 1 at the same time. In all other cases the output is high.
@@ -65,14 +65,14 @@ NAND3 takes the AND and NOT of its inputs so to make the output 0 all of the inp
 # Layout
 ## NOR2
 
-![[Pasted image 20230320203521.png]]
+![NOR2 Layout](resources/nor2layout.png)
 
 The size of this layout is 6.6x6.4 um accounting the pin sizes.
 
 
 
 ## NAND3
-![[Pasted image 20230320203701.png]]
+![NAND3 Layout](resources/nand3layout.png)
 
 The size of this layout is 6x8um accounting the pins.
 
@@ -218,21 +218,21 @@ LVS is made until the design's device classes and pin lists match.
 ## NOR2
 The resulting waveform with parasitics:
 
-![[Pasted image 20230320205349.png]]
+![NOR2 Parasitic Waves](resources/nor2waves1Par.png)
 It can be observed qualitatively that the rise time has increased. Looking closer to the output waveform:
-![[Pasted image 20230320205503.png]]
+![NOR2 Parasitic Waves](resources/nor2waves2Par.png)
 
 The rise time can be calculated as time at 95% subtracted with time at 5% of final value.
 The calculation results a time close to 4ns.
 
 If we take a look at output of NOR2 gate without considering parasitics:
-![[Pasted image 20230320210303.png]]
+![NOR2 Waves](resources/nor2wavesComparison.png)
 The rise time is close to 3ns in non-parasitic case.
 
 
 
 ## NAND3
-![[Pasted image 20230320211810.png]]
+![NAND3 Waves](resources/nand3wavesPar.png)
 
 The pull-down mechanism of the circuit is damaged completely with the introduction of parasitics. My estimation is that the series connected NMOS transistors have accumulated the parasitics effect further. Apparently the rise time also increased but it is not that significant compared to the inability to get to low voltage state. 
 
